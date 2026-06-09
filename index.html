@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Denver Bathroom Remodeling | Colorado Bath | 720.900.2224</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1A202C;
+      --navy-light: #2D3748;
+      --blue: #2B6CB0;
+      --blue-dark: #215387;
+      --green: #13612e;
+      --white: #ffffff;
+      --off-white: #F7FAFC;
+      --gray: #718096;
+      --gray-light: #EDF2F7;
+      --gold: #f5a524;
+      --text: #1A202C;
+      --radius: 10px;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--navy);
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+    .nav-logo {
+      color: var(--white);
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-cta {
+      background: var(--blue);
+      color: var(--white);
+      padding: 10px 22px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--blue-dark); }
+    .nav-phone {
+      color: #CBD5E0;
+      font-size: 0.9rem;
+      text-decoration: none;
+      margin-right: 16px;
+    }
+
+    /* ── HERO (above the fold) ── */
+    .hero {
+      background: linear-gradient(135deg, #0f1825 0%, #1e3a5f 60%, #162d4a 100%);
+      color: var(--white);
+      padding: 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+    }
+    .hero-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: url('bathroom-hero.jpg');
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      filter: brightness(0.45);
+      z-index: 0;
+    }
+    .hero-inner { position: relative; max-width: 820px; margin: 0 auto; }
+
+    /* Stars above headline — instant credibility */
+    .hero-stars {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 0.85rem;
+      color: #CBD5E0;
+      margin-bottom: 28px;
+    }
+    .hero-stars .stars { color: var(--gold); font-size: 1rem; }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 22px;
+      letter-spacing: -1px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--gold);
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: #90aece;
+      max-width: 640px;
+      margin: 0 auto 36px;
+      line-height: 1.5;
+    }
+    .hero-sub strong { color: #e2e8f0; font-weight: 600; }
+
+    /* CTA Buttons */
+    .cta-group {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+    .btn-primary {
+      background: var(--blue);
+      color: var(--white);
+      padding: 16px 32px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1.05rem;
+      transition: all 0.2s;
+      box-shadow: 0 4px 20px rgba(43,108,176,0.4);
+    }
+    .btn-primary:hover { background: var(--blue-dark); transform: translateY(-1px); box-shadow: 0 6px 24px rgba(43,108,176,0.5); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      padding: 16px 32px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      border: 2px solid rgba(255,255,255,0.3);
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.05); }
+
+    /* Risk reversal — RIGHT under the CTA */
+    .risk-reversal {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: #90aece;
+      margin-bottom: 44px;
+    }
+    .risk-reversal span::before { content: '✓ '; color: #68d391; font-weight: 700; }
+
+    /* Trust badges */
+    .trust-badges {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .badge {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 12px 18px;
+      text-align: center;
+      min-width: 130px;
+    }
+    .badge .badge-num { font-size: 1.5rem; font-weight: 900; color: var(--gold); }
+    .badge .badge-label { font-size: 0.75rem; color: #90aece; margin-top: 2px; line-height: 1.3; }
+
+    /* ── PROOF BAR ── */
+    .proof-bar {
+      background: var(--navy);
+      padding: 18px 24px;
+      text-align: center;
+      font-size: 0.875rem;
+      color: #90aece;
+      letter-spacing: 0.3px;
+    }
+    .proof-bar strong { color: var(--white); }
+
+    /* ── SECTIONS ── */
+    section { padding: 80px 24px; }
+    .container { max-width: 1060px; margin: 0 auto; }
+    .section-label {
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--gray);
+      max-width: 580px;
+      margin-bottom: 48px;
+    }
+
+    /* ── SERVICES ── */
+    .services { background: var(--off-white); }
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+      border-top: 4px solid var(--blue);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
+    .card-icon { font-size: 2rem; margin-bottom: 14px; }
+    .card h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 10px; }
+    .card p { color: var(--gray); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }
+    .card-link {
+      color: var(--blue);
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .card-link:hover { text-decoration: underline; }
+
+    /* ── HOW IT WORKS ── */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 32px;
+      position: relative;
+    }
+    .step {
+      text-align: center;
+      padding: 32px 24px;
+      background: var(--off-white);
+      border-radius: var(--radius);
+    }
+    .step-num {
+      width: 52px;
+      height: 52px;
+      background: var(--blue);
+      color: var(--white);
+      border-radius: 50%;
+      font-size: 1.3rem;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+    }
+    .step h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 8px; }
+    .step p { color: var(--gray); font-size: 0.9rem; }
+
+    /* ── WHY US ── */
+    .why-us { background: var(--navy); color: var(--white); }
+    .why-us .section-label { color: var(--gold); }
+    .why-us .section-title { color: var(--white); }
+    .why-us .section-sub { color: #90aece; }
+    .differentiators {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .diff-item {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+    .diff-item h4 { font-size: 1rem; font-weight: 800; margin-bottom: 8px; color: var(--gold); }
+    .diff-item p { font-size: 0.9rem; color: #90aece; line-height: 1.5; }
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 48px;
+    }
+    .stat {
+      background: rgba(255,255,255,0.04);
+      padding: 28px 20px;
+      text-align: center;
+    }
+    .stat .num { font-size: 2.2rem; font-weight: 900; color: var(--gold); }
+    .stat .label { font-size: 0.8rem; color: #90aece; margin-top: 4px; }
+
+    /* ── TESTIMONIALS — wall of love, no carousel ── */
+    .testimonials { background: var(--off-white); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .testimonial {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border-left: 4px solid var(--gold);
+    }
+    .t-stars { color: var(--gold); font-size: 1.1rem; margin-bottom: 12px; }
+    .t-text { font-size: 0.95rem; color: var(--navy-light); line-height: 1.6; margin-bottom: 16px; font-style: italic; }
+    .t-author { font-size: 0.85rem; font-weight: 700; color: var(--gray); }
+
+    /* ── PRICING ── */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .price-card {
+      border: 2px solid var(--gray-light);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      text-align: center;
+      position: relative;
+      transition: border-color 0.2s;
+    }
+    .price-card.featured {
+      border-color: var(--blue);
+      box-shadow: 0 8px 40px rgba(43,108,176,0.15);
+    }
+    .popular-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--blue);
+      color: var(--white);
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 4px 16px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+    .price-tier { font-size: 0.8rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
+    .price-name { font-size: 1.5rem; font-weight: 900; margin-bottom: 6px; }
+    .price-sub { font-size: 0.9rem; color: var(--gray); margin-bottom: 24px; }
+    .price-features { list-style: none; text-align: left; margin-bottom: 28px; }
+    .price-features li { padding: 6px 0; font-size: 0.9rem; color: var(--navy-light); border-bottom: 1px solid var(--gray-light); }
+    .price-features li::before { content: '✓ '; color: var(--green); font-weight: 700; }
+    .btn-outline {
+      display: block;
+      padding: 13px;
+      border: 2px solid var(--blue);
+      color: var(--blue);
+      border-radius: var(--radius);
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-outline:hover { background: var(--blue); color: var(--white); }
+    .btn-filled {
+      display: block;
+      padding: 13px;
+      background: var(--blue);
+      color: var(--white);
+      border-radius: var(--radius);
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-filled:hover { background: var(--blue-dark); }
+
+    /* ── SERVICE AREAS ── */
+    .areas { background: var(--gray-light); text-align: center; }
+    .areas-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 28px;
+    }
+    .area-chip {
+      background: var(--white);
+      border: 1px solid #CBD5E0;
+      border-radius: 100px;
+      padding: 8px 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--navy-light);
+    }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      background: linear-gradient(135deg, #0f1825 0%, #1e3a5f 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 90px 24px;
+    }
+    .final-cta h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 900;
+      margin-bottom: 14px;
+      letter-spacing: -0.5px;
+    }
+    .final-cta p { color: #90aece; font-size: 1.1rem; margin-bottom: 36px; max-width: 500px; margin-left: auto; margin-right: auto; }
+    .final-cta .risk-reversal { margin-top: 24px; margin-bottom: 0; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      color: #718096;
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 0.85rem;
+    }
+    footer a { color: #90aece; text-decoration: none; }
+
+    @media (max-width: 640px) {
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+      .nav-phone { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════ NAV ══════════════════ -->
+<nav>
+  <a href="https://coloradobath.com" class="nav-logo">Colorado<span>Bath</span></a>
+  <div style="display:flex;align-items:center;">
+    <a href="tel:7209002224" class="nav-phone">📞 720.900.2224</a>
+    <a href="https://consultation.coloradobath.com/" class="nav-cta">Free Consultation →</a>
+  </div>
+</nav>
+
+<!-- ══════════════════ HERO — ABOVE THE FOLD ══════════════════ -->
+<!-- 80-90% of effort here per Hormozi. Dream outcome in headline. Risk reversal under CTA. -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner" style="padding: 80px 24px 70px; width: 100%;">
+
+    <!-- Instant credibility before they even read the headline -->
+    <div class="hero-stars">
+      <span class="stars">★★★★★</span>
+      <span>5-Star Rated · Denver's Contractor-Grade Remodel</span>
+    </div>
+
+    <!-- Dream outcome headline — not "what we do," but WHAT THEY GET -->
+    <h1>Your Bathroom, <em>Completely Transformed</em><br>By Real Contractors. Not a Call Center.</h1>
+
+    <!-- Subheadline: reduces effort & sacrifice, explains HOW with no pain -->
+    <p class="hero-sub">
+      One consultation. One crew. One price — <strong>no hidden fees, no subcontractors, no surprises.</strong>
+      Denver's only bathroom remodeler built by a 25-year contractor who held federal government standards.
+    </p>
+
+    <!-- Primary CTA + Secondary CTA -->
+    <div class="cta-group">
+      <a href="https://consultation.coloradobath.com/" class="btn-primary">Schedule a Free Consultation →</a>
+      <a href="tel:7209002224" class="btn-secondary">📞 Call 720.900.2224</a>
+    </div>
+
+    <!-- RISK REVERSAL — right under the CTA button -->
+    <div class="risk-reversal">
+      <span>No Hidden Fees</span>
+      <span>Licensed &amp; Insured</span>
+      <span>No Subcontractors</span>
+      <span>Veteran-Owned</span>
+    </div>
+
+    <!-- Trust badges — stacked proof above the fold -->
+    <div class="trust-badges">
+      <div class="badge">
+        <div class="badge-num">25+</div>
+        <div class="badge-label">Years Contractor Experience</div>
+      </div>
+      <div class="badge">
+        <div class="badge-num">100%</div>
+        <div class="badge-label">Our Own Crew · Zero Subs</div>
+      </div>
+      <div class="badge">
+        <div class="badge-num">$0</div>
+        <div class="badge-label">Hidden Fees · Quote = Final Price</div>
+      </div>
+      <div class="badge">
+        <div class="badge-num">USMC</div>
+        <div class="badge-label">Veteran-Owned Business</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════ PROOF BAR ══════════════════ -->
+<div class="proof-bar">
+  Serving <strong>Denver · Highlands Ranch · Centennial · Parker · Castle Rock · Greenwood Village · Littleton · Aurora</strong>
+</div>
+
+<!-- ══════════════════ SERVICES ══════════════════ -->
+<section class="services">
+  <div class="container">
+    <div class="section-label">Our Services</div>
+    <h2 class="section-title">What Do You Want Your Bathroom to Look Like?</h2>
+    <p class="section-sub">Three jobs, one crew, one standard. Pick yours.</p>
+
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">🚿</div>
+        <h3>Tub-to-Shower Conversion</h3>
+        <p>Replace your unused tub with a beautiful walk-in shower. Samuel Mueller wall panels — no grout, no mold, no maintenance headaches. Done in days, not weeks.</p>
+        <a href="https://coloradobath.com/tub-to-shower-conversion/" class="card-link">Learn More →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛁</div>
+        <h3>Bathtub Renovation</h3>
+        <p>Full tub and surround renovation — new base, new wall system, new fixtures. Professional installation from a licensed contractor, not a handyman.</p>
+        <a href="https://coloradobath.com/tub-replacement/" class="card-link">Learn More →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔨</div>
+        <h3>Full Bathroom Remodel</h3>
+        <p>Complete transformation — layout, fixtures, and everything in between. 25+ years of contractor-grade work behind every job. One point of contact, start to finish.</p>
+        <a href="https://coloradobath.com/full-bathroom-remodel/" class="card-link">Learn More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ HOW IT WORKS — 3 steps max (Hormozi: more than 4 = perceived effort) ══════════════════ -->
+<section style="padding:80px 24px; background:var(--white);">
+  <div class="container">
+    <div class="section-label">The Process</div>
+    <h2 class="section-title">Three Simple Steps. That's It.</h2>
+    <p class="section-sub">No showroom runaround. No sales pressure. Just your bathroom done right.</p>
+
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Schedule a Free Consultation</h3>
+        <p>Pick a time online in 60 seconds. We come to your home, assess your bathroom, and answer every question — no pressure.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Get Your Exact Quote</h3>
+        <p>We give you a written quote on the spot. One number. No hidden fees, no vague line items, no bait-and-switch. That price is your final price.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>We Install. You Enjoy.</h3>
+        <p>Our crew — not subcontractors — handles everything from demo to final walkthrough. You get your new bathroom. Period.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:44px;">
+      <a href="https://consultation.coloradobath.com/" class="btn-primary" style="display:inline-block;">Schedule My Free Consultation →</a>
+      <div style="margin-top:14px; font-size:0.85rem; color:var(--gray);">✓ No obligation &nbsp;·&nbsp; ✓ Same-day quotes available &nbsp;·&nbsp; ✓ We come to you</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ WHY COLORADO BATH ══════════════════ -->
+<!-- Hormozi: headlines should carry the value prop alone — scannable -->
+<section class="why-us">
+  <div class="container">
+    <div class="section-label">Why Colorado Bath</div>
+    <h2 class="section-title">The Standard Doesn't Lower<br>for a Bathroom Job.</h2>
+    <p class="section-sub">Most remodeling companies are built around sales. Colorado Bath was built by a contractor.</p>
+
+    <div class="stats-row">
+      <div class="stat">
+        <div class="num">25+</div>
+        <div class="label">Years of Real Construction Experience</div>
+      </div>
+      <div class="stat">
+        <div class="num">100%</div>
+        <div class="label">Our Own Crew — Zero Subcontractors</div>
+      </div>
+      <div class="stat">
+        <div class="num">$0</div>
+        <div class="label">Hidden Fees — Quote IS Final Price</div>
+      </div>
+      <div class="stat">
+        <div class="num">GSA</div>
+        <div class="label">VA &amp; National Park Service Standards</div>
+      </div>
+    </div>
+
+    <div class="differentiators">
+      <div class="diff-item">
+        <h4>✓ No Subcontractors. Ever.</h4>
+        <p>Your job is handled by our crew from start to finish. No third parties, no strangers in your home, no accountability gaps.</p>
+      </div>
+      <div class="diff-item">
+        <h4>✓ Published Pricing. No Surprises.</h4>
+        <p>We publish our pricing tiers because we have nothing to hide. Your quote is your final price — not a starting point for upsells.</p>
+      </div>
+      <div class="diff-item">
+        <h4>✓ Federal-Grade Standards on Every Job</h4>
+        <p>Managing GSA, VA, and National Park Service contracts means zero tolerance for cutting corners. That discipline carries into your bathroom.</p>
+      </div>
+      <div class="diff-item">
+        <h4>✓ One Point of Contact</h4>
+        <p>No 1-800 number. No regional manager. No rotating reps. You deal with us — directly — from first call to final walkthrough.</p>
+      </div>
+      <div class="diff-item">
+        <h4>✓ Veteran-Owned &amp; Colorado-Operated</h4>
+        <p>USMC veteran. ATP-rated pilot. Career contractor. We live here. Our reputation in the Denver community matters to us personally.</p>
+      </div>
+      <div class="diff-item">
+        <h4>✓ Samuel Mueller Products — Built to Last</h4>
+        <p>No grout lines. No mold traps. No annual resealing. Contractor-grade wall panels we'd install in our own homes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ TESTIMONIALS — WALL OF LOVE ══════════════════ -->
+<!-- Hormozi: never hide in a carousel — show all up front, stack them, make it overwhelming -->
+<section class="testimonials">
+  <div class="container">
+    <div class="section-label">What Colorado Homeowners Say</div>
+    <h2 class="section-title">Don't Take Our Word for It.<br>Read Theirs.</h2>
+    <p class="section-sub">Real customers. Real results. No filters.</p>
+
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"Hired Colorado Bath to redo our master bathroom. Crew showed up on time, got right to work, and kept the place clean. Solid company, good people. Would hire them again."</p>
+        <div class="t-author">— Dave R., Denver</div>
+      </div>
+      <div class="testimonial">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"Great experience from start to finish. Got a few quotes before going with Colorado Bath and they weren't the cheapest, but the communication was the best by far. Bathroom turned out perfect."</p>
+        <div class="t-author">— Terry S., Highlands Ranch</div>
+      </div>
+      <div class="testimonial">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"My bathroom was a mess before — Colorado Bath completely transformed it. I love walking into my shower every morning. Thank you, Colorado Bath!"</p>
+        <div class="t-author">— Vicki H., Centennial</div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:44px;">
+      <a href="https://consultation.coloradobath.com/" class="btn-primary" style="display:inline-block;">Get the Same Results →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ PRICING ══════════════════ -->
+<!-- Hormozi: Straightforward pricing reduces friction and builds trust -->
+<section style="padding:80px 24px; background:var(--white);">
+  <div class="container">
+    <div class="section-label">Transparent Pricing</div>
+    <h2 class="section-title">Straightforward Pricing. No Surprises.</h2>
+    <p class="section-sub">Three clear tiers. No hidden fees. No bait-and-switch. Your quote is your final price.</p>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-tier">Entry Level</div>
+        <div class="price-name">🏔️ Rocky Mountain</div>
+        <div class="price-sub">Entry-level conversion — quality without the premium</div>
+        <ul class="price-features">
+          <li>Tub-to-shower or tub renovation</li>
+          <li>Samuel Mueller wall panels</li>
+          <li>No grout lines, no mold</li>
+          <li>Licensed &amp; insured crew</li>
+          <li>Written quote, final price</li>
+        </ul>
+        <a href="https://consultation.coloradobath.com/" class="btn-outline">Get a Quote</a>
+      </div>
+
+      <div class="price-card featured">
+        <div class="popular-badge">★ Most Popular</div>
+        <div class="price-tier">Premium</div>
+        <div class="price-name">🎿 Breckenridge</div>
+        <div class="price-sub">Premium features included — the sweet spot</div>
+        <ul class="price-features">
+          <li>Everything in Rocky Mountain</li>
+          <li>Premium fixture package</li>
+          <li>Enhanced wall system options</li>
+          <li>Extended warranty coverage</li>
+          <li>Priority scheduling</li>
+        </ul>
+        <a href="https://consultation.coloradobath.com/" class="btn-filled">Get a Quote →</a>
+      </div>
+
+      <div class="price-card">
+        <div class="price-tier">Full Custom</div>
+        <div class="price-name">🏙️ Mile High</div>
+        <div class="price-sub">Full custom build — your vision, exactly</div>
+        <ul class="price-features">
+          <li>Complete bathroom remodel</li>
+          <li>Custom layout &amp; design</li>
+          <li>Premium fixture selection</li>
+          <li>Full tile &amp; material choice</li>
+          <li>White-glove walkthrough</li>
+        </ul>
+        <a href="https://consultation.coloradobath.com/" class="btn-outline">Get a Quote</a>
+      </div>
+    </div>
+
+    <p style="text-align:center; margin-top:24px; font-size:0.85rem; color:var(--gray);">
+      Want exact numbers? <a href="https://coloradobath.com/bathroom-remodeling-pricing-denver-colorado-bath/" style="color:var(--blue); font-weight:700;">View full pricing page →</a>
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════ SERVICE AREAS ══════════════════ -->
+<section class="areas">
+  <div class="container">
+    <div class="section-label">Service Area</div>
+    <h2 class="section-title">We Serve the Front Range</h2>
+    <p style="color:var(--gray); font-size:1rem; margin-top:8px;">Licensed contractor serving homeowners across the Denver metro area.</p>
+    <div class="areas-grid">
+      <span class="area-chip">Denver</span>
+      <span class="area-chip">Highlands Ranch</span>
+      <span class="area-chip">Centennial</span>
+      <span class="area-chip">Parker</span>
+      <span class="area-chip">Castle Rock</span>
+      <span class="area-chip">Greenwood Village</span>
+      <span class="area-chip">Littleton</span>
+      <span class="area-chip">Aurora</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ FINAL CTA ══════════════════ -->
+<!-- Repeat the dream outcome + risk reversal at the bottom for those who scrolled the whole page -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Ready to Get It Done Right?</h2>
+    <p>No pressure. No surprises. The same standard on every job — whether it's a tub swap or a full remodel.</p>
+
+    <div class="cta-group" style="margin-bottom:0;">
+      <a href="https://consultation.coloradobath.com/" class="btn-primary">Schedule a Free Consultation →</a>
+      <a href="tel:7209002224" class="btn-secondary">📞 720.900.2224</a>
+    </div>
+
+    <div class="risk-reversal" style="margin-top:20px;">
+      <span>Free Consultation</span>
+      <span>No Obligation</span>
+      <span>Licensed &amp; Insured</span>
+      <span>Written Quote = Final Price</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer>
+  <p>© 2026 Colorado Bath · Denver, Colorado · <a href="tel:7209002224">720.900.2224</a> · Licensed &amp; Insured · Veteran-Owned</p>
+</footer>
+
+</body>
+</html>
