@@ -71,53 +71,30 @@
     .hero {
       background: linear-gradient(135deg, #0f1825 0%, #1e3a5f 60%, #162d4a 100%);
       color: var(--white);
-      padding: 0;
+      padding: 90px 24px 80px;
+      text-align: center;
       position: relative;
       overflow: hidden;
-      display: flex;
-      align-items: stretch;
-      min-height: 600px;
-    }
-    .hero-inner {
-      position: relative;
-      z-index: 1;
-      flex: 1;
+      min-height: 88vh;
       display: flex;
       align-items: center;
-      padding: 70px 48px 70px 5%;
-      max-width: 640px;
-      text-align: left;
     }
-    .hero-inner-content { width: 100%; }
-    .hero-photo {
-      flex: 0 0 45%;
-      max-width: 45%;
-      overflow: hidden;
-      position: relative;
-    }
-    .hero-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-    }
-    .hero-photo::before {
-      content: '';
+    .hero-bg {
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: linear-gradient(to right, #0f1825 0%, transparent 30%);
-      z-index: 1;
+      background-image: url('bathroom-hero.jpg');
+      background-size: cover;
+      background-position: center center;
+      filter: brightness(0.28);
+      z-index: 0;
     }
-    .cta-group { justify-content: flex-start; }
-    .risk-reversal { justify-content: flex-start; }
-    .trust-badges { justify-content: flex-start; }
+    .hero-inner { position: relative; z-index: 1; max-width: 820px; margin: 0 auto; width: 100%; }
+    .cta-group { justify-content: center; }
+    .risk-reversal { justify-content: center; }
+    .trust-badges { justify-content: center; }
     .hero-stars { display: inline-flex; }
     @media (max-width: 768px) {
-      .hero { flex-direction: column; }
-      .hero-inner { max-width: 100%; padding: 48px 24px; text-align: center; }
-      .hero-photo { flex: 0 0 260px; max-width: 100%; }
-      .cta-group, .risk-reversal, .trust-badges { justify-content: center; }
+      .hero { min-height: auto; }
     }
 
     /* Stars above headline — instant credibility */
@@ -489,8 +466,8 @@
 <!-- ══════════════════ HERO — ABOVE THE FOLD ══════════════════ -->
 <!-- 80-90% of effort here per Hormozi. Dream outcome in headline. Risk reversal under CTA. -->
 <section class="hero">
+  <div class="hero-bg"></div>
   <div class="hero-inner">
-    <div class="hero-inner-content">
 
     <!-- Instant credibility before they even read the headline -->
     <div class="hero-stars">
@@ -541,11 +518,7 @@
       </div>
     </div>
 
-    </div><!-- /hero-inner-content -->
-  </div><!-- /hero-inner -->
-  <div class="hero-photo">
-    <img src="bathroom-hero.jpg" alt="Luxury bathroom remodel by Colorado Bath" />
-  </div>
+    </div><!-- /hero-inner -->
 </section>
 <div class="proof-bar">
   Serving <strong>Denver · Highlands Ranch · Centennial · Parker · Castle Rock · Greenwood Village · Littleton · Aurora</strong>
